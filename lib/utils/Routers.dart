@@ -4,6 +4,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:my_module/ImageDemo.dart';
+import 'package:my_module/NativeBridge.dart';
 import 'package:my_module/paramsdemo/ParamDemoSendPage.dart';
 import 'package:my_module/paramsdemo/ParamReceiveDemoPage.dart';
 //
@@ -13,11 +14,11 @@ import 'package:my_module/paramsdemo/ParamReceiveDemoPage.dart';
 //   };
 // }
 
-
 Map<String,WidgetBuilder> getRoutes()=>{
   ParamDemoSendPage.routeName:(BuildContext context) => ParamDemoSendPage(),
   ParamReceiveDemoPage.routeName:(BuildContext context) => ParamReceiveDemoPage(),
   ImageDemo.routerName:(BuildContext context) => ImageDemo(),
+  NativeBridge.routeName:(BuildContext context) => NativeBridge(),
 };
 
 class Routers{

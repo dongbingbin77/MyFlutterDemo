@@ -36,6 +36,7 @@ class _ParamDemoSendPageState extends State<ParamDemoSendPage>{
         children: [
           Text("接收数据到下一个页面的回传数据 ${_backParam["a"]}"),
           Container(
+            margin: EdgeInsets.only(top:20),
             child: GestureDetector(
               child: Text("传惨到下一个页面"),
               onTap: ()=> _navigateTo(),

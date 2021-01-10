@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:my_module/ImageDemo.dart';
+import 'package:my_module/NativeBridge.dart';
 import 'package:my_module/paramsdemo/ParamDemoSendPage.dart';
 
 class DemoListPage extends StatelessWidget{
@@ -32,6 +33,13 @@ class DemoListPage extends StatelessWidget{
               child: GestureDetector(
                 child: Text("页面传惨实例"),
                 onTap:()=> _navigateTo(context,ParamDemoSendPage.routeName),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top:20),
+              child: GestureDetector(
+                child: Text("native bridge"),
+                onTap:()=> _navigateTo(context,NativeBridge.routeName),
               ),
             ),
           ],
