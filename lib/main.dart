@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
 
@@ -9,10 +10,14 @@ import 'package:my_module/paramsdemo/ParamReceiveDemoPage.dart';
 import 'package:my_module/utils/Routers.dart';
 
 import 'DemoListPage.dart';
+import 'flurorouter/Application.dart';
+import 'flurorouter/FlRouter.dart';
 import 'models/User.dart';
 void main() => runApp(_widgetForRoute(window.defaultRouteName));
 
 Widget _widgetForRoute(String route) {
+  Application.router = FluroRouter();
+  FlRoutes.configureRoutes(Application.router);
   switch (route) {
     case 'route1':
       return MyApp();
@@ -31,6 +36,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       routes: getRoutes(),
       title: 'Flutter Demo',
+      onGenerateRoute: FluroRouter.appRouter.generator,
       theme: ThemeData(
         // This is the theme of your application.
         //

@@ -4,6 +4,8 @@ import 'package:my_module/ImageDemo.dart';
 import 'package:my_module/NativeBridge.dart';
 import 'package:my_module/paramsdemo/ParamDemoSendPage.dart';
 
+import 'flurorouter/FlNavUtils.dart';
+
 class DemoListPage extends StatelessWidget{
 
   _navigateTo(BuildContext context,String routeName){
@@ -40,6 +42,13 @@ class DemoListPage extends StatelessWidget{
               child: GestureDetector(
                 child: Text("native bridge"),
                 onTap:()=> _navigateTo(context,NativeBridge.routeName),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top:20),
+              child: GestureDetector(
+                child: Text("Fluro router"),
+                onTap:()=> FlNavUtils.goPage1(context),
               ),
             ),
           ],
