@@ -8,6 +8,8 @@ import 'package:my_module/flurorouter/pages/FluroPageList.dart';
 import 'package:my_module/models/User.dart';
 import 'dart:convert' as convert;
 
+import 'package:my_module/utils/JsonUtils.dart';
+
 var demoListHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
   return DemoListPage();
 });
@@ -16,7 +18,7 @@ var demoListHandler = Handler(handlerFunc: (BuildContext context, Map<String, dy
 var fluroPage1Handler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
   print('fluroPage1Handler');
 
-   User user1 = User.fromJson(convert.jsonDecode(params["user"][0]));
+   User user1 = User.fromJson(convertJson2Model(params["user"][0]));
   // User.fromJson(params)
   return FluroPage1(user:user1);
 });
