@@ -1,32 +1,23 @@
 
 import 'package:flutter/material.dart';
-import 'package:my_module/models/User.dart';
 
-class FluroPage1 extends StatefulWidget{
-
-  User user ;
-
-
-  FluroPage1({Key key,this.user}):super(key: key);
+class FluroPage2 extends StatefulWidget{
 
   @override
   State createState() {
-    return _FluroPage1State(this.user);
+    return _FluroPage2State();
   }
 }
 
-class _FluroPage1State extends State<FluroPage1>{
-  User user = User("1",2);
-
-  _FluroPage1State(this.user);
-
+class _FluroPage2State extends State<FluroPage2>{
+  Map<String,String> _backParam = Map();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("发送数据"),),
       body: Column(
         children: [
-          Text("username: ${user.name}"),
+          Text("接收数据到下一个页面的回传数据 ${_backParam["a"]}"),
           Container(
             margin: EdgeInsets.only(top:20),
             child: GestureDetector(

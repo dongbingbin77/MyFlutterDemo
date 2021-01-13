@@ -48,7 +48,7 @@ class DemoListPage extends StatelessWidget{
               margin: EdgeInsets.only(top:20),
               child: GestureDetector(
                 child: Text("Fluro router"),
-                onTap:()=> FlNavUtils.goPage1(context),
+                onTap:()=> FlNavUtils.goPageList(context),
               ),
             ),
           ],
