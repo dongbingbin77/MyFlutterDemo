@@ -8,6 +8,7 @@ class FlRoutes {
   static String root = "/";
   static String page1 = "/page1";
   static String page2 = "/page2";
+  static String page3 = "/page3";
   static String pageList = "/pageFluroList";
   // static String demoParams = "/deme_params";
   // static String returnParams = "/return_params";
@@ -27,6 +28,7 @@ class FlRoutes {
     router.define("/router1", handler: demoListHandler);
     router.define(page1, handler: fluroPage1Handler);
     router.define(page2, handler: fluroPage2Handler);
+    router.define(page3, handler: fluroPage3Handler);
     router.define(pageList, handler: fluroPageListHandler);
     // router.define(home, handler: homeHandler);
     // router.define(demoParams, handler: demoParamHandler);

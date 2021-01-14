@@ -36,6 +36,28 @@ class _FluroPage2State extends State<FluroPage2>{
               },
             ),
           ),
+          Container(
+            margin: EdgeInsets.only(top:20),
+            child: GestureDetector(
+              child: Text("返回 Fluro首页"),
+              onTap: () {
+                FlNavUtils.goPageList(context,clearStack: true);
+                //Navigator.of(context).po
+                print("123");
+              },
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(top:20),
+            child: GestureDetector(
+              child: Text("到 fluro page3"),
+              onTap: () {
+                FlNavUtils.goPage3(context);
+                //Navigator.of(context).po
+                print("123");
+              },
+            ),
+          ),
         ],
       ),
     );
