@@ -25,8 +25,8 @@ var fluroPage1Handler = Handler(handlerFunc: (BuildContext context, Map<String, 
 
 
 var fluroPage2Handler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
-  print('fluroPage2Handler');
-  return FluroPage2();
+  print('fluroPage2Handler ${convertModel2Json(params)}');
+  return FluroPage2(convertJson2Model(params["name"][0]));
 });
 
 var fluroPageListHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
