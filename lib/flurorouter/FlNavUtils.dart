@@ -28,6 +28,7 @@ class FlNavUtils{
     return navigateTo(context, FlRoutes.pageList,clearStackPara: clearStack,transition: TransitionType.material);
   }
 
+
   static void pop(BuildContext context,dynamic result){
     Application.router.pop(context,result);
   }

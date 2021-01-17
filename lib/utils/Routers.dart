@@ -7,6 +7,7 @@ import 'package:my_module/ImageDemo.dart';
 import 'package:my_module/NativeBridge.dart';
 import 'package:my_module/paramsdemo/ParamDemoSendPage.dart';
 import 'package:my_module/paramsdemo/ParamReceiveDemoPage.dart';
+import 'package:my_module/providers/provider_page_1.dart';
 //
 // Map<String,Widget> getMap(){
 //   return {
@@ -19,6 +20,7 @@ Map<String,WidgetBuilder> getRoutes()=>{
   ParamReceiveDemoPage.routeName:(BuildContext context) => ParamReceiveDemoPage(),
   ImageDemo.routerName:(BuildContext context) => ImageDemo(),
   NativeBridge.routeName:(BuildContext context) => NativeBridge(),
+  // ProviderPage1.routeName:(BuildContext context) => ProviderPage1(),
 };
 
 class Routers{

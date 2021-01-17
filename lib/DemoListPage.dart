@@ -2,7 +2,9 @@
 import 'package:flutter/material.dart';
 import 'package:my_module/ImageDemo.dart';
 import 'package:my_module/NativeBridge.dart';
+import 'package:my_module/flurorouter/FlRouter.dart';
 import 'package:my_module/paramsdemo/ParamDemoSendPage.dart';
+import 'package:my_module/providers/provider_page_1.dart';
 
 import 'flurorouter/FlNavUtils.dart';
 
@@ -49,6 +51,13 @@ class DemoListPage extends StatelessWidget{
               child: GestureDetector(
                 child: Text("Fluro router"),
                 onTap:()=> FlNavUtils.goPageList(context),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top:20),
+              child: GestureDetector(
+                child: Text("Provider Demo"),
+                onTap:()=>FlNavUtils.navigateTo(context, FlRoutes.providerPage1),
               ),
             ),
           ],
