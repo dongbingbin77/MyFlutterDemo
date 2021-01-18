@@ -4,6 +4,8 @@ import 'package:my_module/providers/locator.dart';
 import 'package:my_module/providers/viewmodels/base_view_model.dart';
 import 'package:provider/provider.dart';
 
+import '../base_consumer.dart';
+
 //暂时没有用到
 class BaseScreen<T extends BaseViewModel> extends StatefulWidget {
   final Widget Function(BuildContext context, T model, Widget child) builder;
