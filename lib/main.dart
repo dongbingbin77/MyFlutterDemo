@@ -6,6 +6,7 @@ import 'dart:ui';
 
 import 'package:flutter/services.dart';
 import 'package:my_module/paramsdemo/ParamReceiveDemoPage.dart';
+import 'package:my_module/providers/locator.dart';
 
 import 'package:my_module/utils/Routers.dart';
 
@@ -17,6 +18,7 @@ void main() => runApp(_widgetForRoute(window.defaultRouteName));
 
 Widget _widgetForRoute(String route) {
   Application.router = FluroRouter();
+  setupLoader();
   FlRoutes.configureRoutes(Application.router);
   switch (route) {
     case 'route1':
@@ -33,6 +35,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       routes: getRoutes(),
       title: 'Flutter Demo',

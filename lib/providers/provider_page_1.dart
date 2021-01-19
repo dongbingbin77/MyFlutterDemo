@@ -1,7 +1,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:my_module/flurorouter/FlNavUtils.dart';
+import 'package:my_module/flurorouter/FlRouter.dart';
 import 'package:my_module/providers/counter.dart';
+import 'package:my_module/providers/ui/base_screen.dart';
+import 'package:my_module/providers/viewmodels/counter_view_model.dart';
 import 'package:provider/provider.dart';
 
 
@@ -42,6 +46,14 @@ class ProviderPage1 extends StatelessWidget {
 
               ),
               ReduceWidget(),
+              Container(
+                child: TextButton(
+                  onPressed: (){
+                    FlNavUtils.navigateTo(context, FlRoutes.providerPageViewModel);
+                  },
+                  child: Text("go to viewmodel"),
+                ),
+              ),
             ],
           ),
         ),

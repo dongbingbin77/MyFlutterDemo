@@ -60,6 +60,13 @@ class DemoListPage extends StatelessWidget{
                 onTap:()=>FlNavUtils.navigateTo(context, FlRoutes.providerPage1),
               ),
             ),
+            Container(
+              margin: EdgeInsets.only(top:20),
+              child: GestureDetector(
+                child: Text("Provider ViewModel Demo"),
+                onTap:()=>FlNavUtils.navigateTo(context, FlRoutes.providerPageViewModel),
+              ),
+            ),
           ],
         ),
       ),

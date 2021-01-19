@@ -8,6 +8,7 @@ import 'package:my_module/flurorouter/pages/FluroPage3.dart';
 import 'package:my_module/flurorouter/pages/FluroPageList.dart';
 import 'package:my_module/models/User.dart';
 import 'package:my_module/providers/provider_page_1.dart';
+import 'package:my_module/providers/provider_page_viewmodel.dart';
 import 'dart:convert' as convert;
 
 import 'package:my_module/utils/JsonUtils.dart';
@@ -47,4 +48,10 @@ var fluroPageListHandler = Handler(handlerFunc: (BuildContext context, Map<Strin
 var fluroProviderPage1Handler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
   print('fluroProviderPage1Handler');
   return ProviderPage1();
+});
+
+
+var fluroProviderPageViewModelHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+  print('fluroProviderPageViewModelHandler');
+  return ProviderPageViewModel();
 });

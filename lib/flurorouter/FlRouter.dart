@@ -3,6 +3,7 @@ import 'package:fluro/fluro.dart';
 import 'package:flutter/widgets.dart';
 import 'package:my_module/flurorouter/route_handlers.dart';
 import 'package:my_module/providers/provider_page_1.dart';
+import 'package:my_module/providers/provider_page_viewmodel.dart';
 
 
 class FlRoutes {
@@ -12,6 +13,7 @@ class FlRoutes {
   static String page3 = "/page3";
   static String pageList = "/pageFluroList";
   static String providerPage1 = ProviderPage1.routeName;
+  static String providerPageViewModel = ProviderPageViewModel.routeName;
   // static String demoParams = "/deme_params";
   // static String returnParams = "/return_params";
   // static String transitionDemo = "/transitionDemo";
@@ -33,6 +35,7 @@ class FlRoutes {
     router.define(page3, handler: fluroPage3Handler);
     router.define(pageList, handler: fluroPageListHandler);
     router.define(ProviderPage1.routeName, handler: fluroProviderPage1Handler);
+    router.define(ProviderPageViewModel.routeName, handler: fluroProviderPageViewModelHandler);
     // router.define(home, handler: homeHandler);
     // router.define(demoParams, handler: demoParamHandler);
     // router.define(returnParams, handler: returnParamHandler);
