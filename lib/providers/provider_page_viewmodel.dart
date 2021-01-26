@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:my_module/net/NetReq.dart';
 import 'package:my_module/providers/counter.dart';
 import 'package:my_module/providers/provider_page_1.dart';
 import 'package:my_module/providers/ui/base_screen.dart';
@@ -51,7 +52,20 @@ class ProviderPageViewModel extends StatelessWidget {
                         },
                         child: Text("group1 减 "),
                       ),
-                    )
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top:20),
+                      child: TextButton(
+                        child: Text("net work"),
+                        onPressed:()  {
+                          model.fetchAlbum();
+                        },
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top:20),
+                      child: Text("net work result ${model.album.title}"),
+                    ),
                   ],
                 );
               },

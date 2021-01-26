@@ -30,6 +30,9 @@ dependencies:
   fluro: ^1.7.8
   provider: ^4.3.2
   get_it: ^5.0.4
+  http: ^0.12.2
+  dio: ^3.0.10
+#https://pub.flutter-io.cn/packages
 
 dev_dependencies:
   flutter_test:

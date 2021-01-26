@@ -5,6 +5,8 @@ class ImageDemo extends StatelessWidget{
   static String routerName="imageDemo";
   @override
   Widget build(BuildContext context) {
+    var temp = {"name":"123","age":"112"};
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Image Demo"),
