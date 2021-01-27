@@ -32,6 +32,7 @@ dependencies:
   get_it: ^5.0.4
   http: ^0.12.2
   dio: ^3.0.10
+  scroll_page_view: ^0.0.1
 #https://pub.flutter-io.cn/packages
 
 dev_dependencies:
