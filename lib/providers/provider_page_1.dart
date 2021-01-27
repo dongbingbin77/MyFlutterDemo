@@ -7,6 +7,9 @@ import 'package:my_module/providers/counter.dart';
 import 'package:my_module/providers/ui/base_screen.dart';
 import 'package:my_module/providers/viewmodels/counter_view_model.dart';
 import 'package:provider/provider.dart';
+import 'package:scroll_page_view/scroll_page.dart';
+import 'package:scroll_page_view/pager/page_controller.dart';
+import 'package:scroll_page_view/pager/scroll_page_view.dart';
 
 
 class ProviderPage1 extends StatelessWidget {
@@ -54,6 +57,7 @@ class ProviderPage1 extends StatelessWidget {
                   child: Text("go to viewmodel"),
                 ),
               ),
+
             ],
           ),
         ),
